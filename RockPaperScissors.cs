@@ -15,12 +15,9 @@ public static class RockPaperScissors
     ];
     public static void PlayRounds()
     {
-        byte[] keyBytes = new byte[32];
-        Random r = new Random();
-
         while (true)
         {
-            r.NextBytes(keyBytes);
+            byte[] keyBytes = RandomNumberGenerator.GetBytes(32);
             int computerMove = RandomNumberGenerator.GetInt32(3);
             ShowHashToUser(computerMove, keyBytes);
             int userMove = GetUserMove();
