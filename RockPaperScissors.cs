@@ -13,7 +13,7 @@ public static class RockPaperScissors
         [1, 0, -1],
         [-1, 1, 0],
     ];
-    public static void PlayRound()
+    public static void PlayRounds()
     {
         byte[] keyBytes = new byte[32];
         Random r = new Random();
@@ -64,10 +64,10 @@ public static class RockPaperScissors
                 Console.WriteLine($"We both choose {Moves[computerMove]}");
                 break;
             case -1:
-                Console.WriteLine($"My move was {Moves[computerMove]} i won!");
+                Console.WriteLine($"My move was {Moves[computerMove]} - i won!");
                 break;
             case 1:
-                Console.WriteLine($"My move was {Moves[computerMove]} you won!");
+                Console.WriteLine($"My move was {Moves[computerMove]} - you won!");
                 break;
         }
     }
